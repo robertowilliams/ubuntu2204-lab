@@ -1,2 +1,2 @@
 # ubuntu2204-lab
-My Ubuntu 22.04 Lab
+Docker repo robbat1/ubuntu2204-lab
