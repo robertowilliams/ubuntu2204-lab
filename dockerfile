@@ -15,6 +15,7 @@ RUN apt-get update && apt-get install -y \
     python3-venv \
     plocate \
     tree \
+    gh \
     software-properties-common
 
 # Install Docker
