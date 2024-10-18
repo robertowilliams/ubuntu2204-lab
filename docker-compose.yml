@@ -7,11 +7,12 @@ services:
     container_name: ubuntu_lab
     restart: always
     ports:
-      - "7722:22"  # Expose port 22 on the container to 2222 on the host
+      - "7722:22"
     #environment:
     #  - TZ=Etc/UTC
     volumes:
-      - ./data:/data  # Optional: Mount a local directory for persistence
+      - ./data:/data
+      - ./opt:/opt
     #command: /usr/sbin/sshd -D  # Keep the SSH server running in the foreground
     tty: true  # Keep the container running interactively
     networks:
