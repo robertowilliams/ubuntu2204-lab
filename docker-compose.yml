@@ -1,0 +1,22 @@
+version: '3.8'
+
+services:
+  ubuntu_lab:
+    #image: ubuntu:22.04
+    image: robbat1/ubuntu2204-lab:1.0
+    container_name: ubuntu_lab
+    restart: always
+    ports:
+      - "7722:22"  # Expose port 22 on the container to 2222 on the host
+    #environment:
+    #  - TZ=Etc/UTC
+    volumes:
+      - ./data:/data  # Optional: Mount a local directory for persistence
+    #command: /usr/sbin/sshd -D  # Keep the SSH server running in the foreground
+    tty: true  # Keep the container running interactively
+    networks:
+      - ubuntu_net
+
+networks:
+  ubuntu_net:
+    driver: bridge
